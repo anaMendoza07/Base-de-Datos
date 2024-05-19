@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="425.0" style="-fx-background-color: #0979b0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
+   <children>
+      <Label layoutX="93.0" layoutY="105.0" text="Banco " textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="105.0" text="Centenario" textFill="#b6ffff">
+         <font>
+            <Font name="Bell MT" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreUsuario" layoutX="178.0" layoutY="202.0" />
+      <Label layoutX="93.0" layoutY="205.0" text="Nombre:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="250.0" text="Contraseña: " textFill="WHITE" />
+      <Separator layoutX="113.0" layoutY="86.0" prefWidth="200.0" />
+      <Label layoutX="170.0" layoutY="36.0" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="ingresarbtn" layoutX="152.0" layoutY="302.0" mnemonicParsing="false" style="-fx-background-color: #0979b0;" text="Ingresar" textFill="#b6ffff">
+         <font>
+            <Font name="Bell MT" size="25.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="contraseniaUsuario" layoutX="178.0" layoutY="246.0" />
+   </children>
+</AnchorPane>

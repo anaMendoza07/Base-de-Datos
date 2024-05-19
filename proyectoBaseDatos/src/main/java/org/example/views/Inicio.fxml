@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="504.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.InicioController">
+    <children>
+        <AnchorPane fx:id="tabEntidades" layoutX="-1.0" prefHeight="82.0" prefWidth="782.0" style="-fx-background-color: #0979B0;">
+            <children>
+                <Label layoutX="60.0" layoutY="18.0" text="Banco Centenario" textFill="WHITE">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Label layoutX="562.0" layoutY="18.0" text="Menú principal" textFill="WHITE">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/billetera.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+      <TabPane layoutY="82.0" prefHeight="422.0" prefWidth="781.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabTransacciones" text="Transacciones">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="763.0" style="-fx-background-color: #00aeae;">
+                     <children>
+                        <TabPane layoutX="3.0" layoutY="4.0" prefHeight="385.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabContratos" text="Contratos">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="780.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <TableView fx:id="tableContratos" layoutY="-1.0" prefHeight="359.0" prefWidth="511.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="Sucursal" />
+                                                <TableColumn prefWidth="75.0" text="Empleado" />
+                                                <TableColumn prefWidth="75.0" text="Cargo" />
+                                                <TableColumn prefWidth="75.0" text="Fecha Inicio" />
+                                                <TableColumn prefWidth="75.0" text="Fecha Fin" />
+                                            </columns>
+                                          </TableView>
+                                          <ImageView fitHeight="35.0" fitWidth="44.0" layoutX="716.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../../../Downloads/cerrarSesion.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabDepartamentos" text="Entidades">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #00aeae;">
+                     <children>
+                        <TabPane layoutX="4.0" layoutY="5.0" prefHeight="384.0" prefWidth="774.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Departamento">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="215.0" prefWidth="486.0">
+                                       <children>
+                                          <TableView fx:id="tableDepartamentos" layoutX="-1.0" layoutY="-1.0" prefHeight="358.0" prefWidth="520.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="C1" />
+                                              <TableColumn prefWidth="75.0" text="C2" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tapTipoMunicipios" text="Tipo Municipio">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableTipoMunicipio" layoutX="-1.0" prefHeight="358.0" prefWidth="520.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="Codigo" />
+                                              <TableColumn prefWidth="75.0" text="Importancia" />
+                                            </columns>
+                                          </TableView>
+                                          <Button layoutX="562.0" layoutY="121.0" mnemonicParsing="false" text="Agregar" />
+                                          <Button layoutX="651.0" layoutY="121.0" mnemonicParsing="false" text="Eliminar" />
+                                          <Button layoutX="566.0" layoutY="167.0" mnemonicParsing="false" text="Actualizar" />
+                                          <Button layoutX="654.0" layoutY="167.0" mnemonicParsing="false" text="Buscar" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab fx:id="tabMunicipios" text="Municipio">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableMunicipio" prefHeight="358.0" prefWidth="520.0">
+                                            <columns>
+                                              <TableColumn prefWidth="121.60000610351562" text="Cantidad poblacion" />
+                                              <TableColumn prefWidth="105.5999755859375" text="Tipo Municipio" />
+                                            </columns>
+                                          </TableView>
+                                          <Button mnemonicParsing="false" text="Agregar" />
+                                          <Button layoutX="559.0" layoutY="108.0" mnemonicParsing="false" text="Agregar" />
+                                          <Button layoutX="637.0" layoutY="108.0" mnemonicParsing="false" text="Eliminar" />
+                                          <Button layoutX="611.0" layoutY="153.0" mnemonicParsing="false" text="Actualizar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabSucursales" text="Sucursales">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button layoutX="555.0" layoutY="90.0" mnemonicParsing="false" text="Agregar" />
+                                          <Button layoutX="649.0" layoutY="90.0" mnemonicParsing="false" text="Eliminar" />
+                                          <Button layoutX="614.0" layoutY="153.0" mnemonicParsing="false" text="Actualizar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabCargos" text="Cargos">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableCargos" prefHeight="358.0" prefWidth="519.0">
+                                            <columns>
+                                              <TableColumn prefWidth="128.0" text="Cargo" />
+                                              <TableColumn prefWidth="103.20001220703125" text="Nombre" />
+                                                <TableColumn prefWidth="136.0" text="Salario" />
+                                                <TableColumn prefWidth="152.79998779296875" text="Funciones Asignadas" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabProfesionales" text="Profesionales">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="366.0" prefWidth="763.0">
+                                       <children>
+                                          <TableView prefHeight="354.0" prefWidth="521.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="C1" />
+                                              <TableColumn prefWidth="75.0" text="C2" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabEmpleados" text="Empleado">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabReportes" text="Reportes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #00aeae;">
+                     <children>
+                        <TabPane layoutX="4.0" layoutY="6.0" prefHeight="384.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabListarSucursales" text="Listar sucursales">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <TableView fx:id="tableSucursales1" prefHeight="354.0" prefWidth="519.0">
+                                             <columns>
+                                                <TableColumn prefWidth="101.60000610351562" text="Codigo" />
+                                                <TableColumn prefWidth="94.39999389648438" text="Nombre" />
+                                                <TableColumn prefWidth="93.59991455078125" text="Ubicacion" />
+                                                <TableColumn prefWidth="96.0" text="Director" />
+                                                <TableColumn prefWidth="134.39996337890625" text="Presupuesto Anual" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tabInformeEmpleados" text="Informe empleados">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <TableView fx:id="tableEmpleado1" prefHeight="355.0" prefWidth="519.0">
+                                             <columns>
+                                                <TableColumn prefWidth="88.0" text="Cedula" />
+                                                <TableColumn prefWidth="56.0" text="Id" />
+                                                <TableColumn prefWidth="80.79998779296875" text="Nombre" />
+                                                <TableColumn prefWidth="68.79998779296875" text="Telefono" />
+                                                <TableColumn prefWidth="75.20001220703125" text="Direccion" />
+                                                <TableColumn prefWidth="68.79998779296875" text="Cargo" />
+                                                <TableColumn prefWidth="82.4000244140625" text="Profesion" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabUtilidades" text="Utilidades">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #00aeae;">
+                     <children>
+                        <TabPane layoutX="4.0" layoutY="6.0" prefHeight="383.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabUsuarios" text="Usuarios">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tabBitacora" text="Bitacora usuarios">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                              </content>
+                            </Tab>
+                              <Tab fx:id="tabCalculadora" text="Calculadora">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabHoraFechaActual" text="Fecha y Hora actual">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabAyuda" text="Ayuda">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #00aeae;">
+                     <children>
+                        <TabPane layoutX="4.0" layoutY="6.0" prefHeight="382.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabAyudaApp" text="Ayuda de la app">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tabAcercaDe" text="Acerca de...">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
